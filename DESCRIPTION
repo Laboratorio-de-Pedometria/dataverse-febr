@@ -1,6 +1,6 @@
-Package: dataverse
+Package: dataverse4febr
 Version: 0.3.11
-Title: Client for Dataverse 4+ Repositories
+Title: Client for FEBR Dataverse
 Authors@R:
    c(person(given = "Shiro", 
             family = "Kuriwaki",

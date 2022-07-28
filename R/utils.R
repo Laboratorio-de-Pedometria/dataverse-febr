@@ -91,7 +91,7 @@ get_fileid.dataverse_file <- function(x, ...) {
 #' @return Length-1 logical, `TRUE` if it is ingested and `FALSE` otherwise
 #' @examples
 #' \dontrun{
-#' # https://demo.dataverse.org/file.xhtml?persistentId=doi:10.70122/FK2/PPIAXE
+#' # http://demo.dataverse.org/file.xhtml?persistentId=doi:10.70122/FK2/PPIAXE
 #' # nlsw88.tab
 #' is_ingested(x = "doi:10.70122/FK2/PPIAXE/MHDB0O",
 #'             server = "demo.dataverse.org")
@@ -126,7 +126,7 @@ is_ingested <- function(
   if (nrow(file_info) > 1)
     warning("More than 1 file found for `is_ingested`, search may be unreliable.")
 
-  # if UNF (https://guides.dataverse.org/en/latest/developers/unf/index.html) is not null, it is ingested
+  # if UNF (http://guides.dataverse.org/en/latest/developers/unf/index.html) is not null, it is ingested
   return(!is.null(file_info$unf[1]) && !is.na(file_info$unf[1]))
 }
 
@@ -193,7 +193,7 @@ api_url <- function(server = Sys.getenv("DATAVERSE_SERVER"), prefix = "api/") {
   } else {
     domain <- paste0(server_parsed[["hostname"]], ":", server_parsed[["port"]])
   }
-  return(paste0("https://", domain, "/", prefix))
+  return(paste0("http://", domain, "/", prefix))
 }
 
 # parse dataset response into list/dataframe
